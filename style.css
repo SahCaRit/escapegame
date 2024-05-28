@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s;
+    position: relative; /* Added for positioning hiddenNumber */
+}
+
+
+input[type="text"] {
+    padding: 20px;
+    width: 50%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#result.wrong {
+    animation: shake 0.5s;
+    color: red;
+}
+
+#result.right {
+    color: green;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#hiddenNumber {
+    color: rgb(255,255,255);
+    cursor: pointer;
+    position: absolute; /* Positioning hiddenNumber */
+    top: 70px; /* Adjust as needed */
+    left: 10%;
+    transform: translateX(-50%);
+    font-size: 50px;
+}
+
+#hiddenNumber.revealed {
+    color: red; /* Message in red after click */
+    font-size: 30px;
+    font-weight: bold;
+}

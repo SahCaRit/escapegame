@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigme Escape Game - SNT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p id="hiddenNumber" onclick="revealMessage()">1</p> <!-- Le chiffre caché en blanc -->
+        <h1>Énigme Escape Game</h1>
+        <p>Résolvez cette énigme pour trouver le chiffre mystère :</p>
+        <p>Parfois le problème n'est pas là où on le cherche ^^</p>
+        <img id="equation" src="equation.jpg">
+        <p><p>
+        <input type="text" id="answer" placeholder="Votre réponse">
+        <button onclick="checkAnswer()">Valider</button>
+        <p id="result"></p>
+        <img id="rickrollGif" src="https://www.icegif.com/wp-content/uploads/2023/01/icegif-162.gif" alt="Rickroll" style="display: none; width: 400px; margin-top: 0px; align: center;">
+        <audio id="rickrollAudio" src="hello.mp3"></audio>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
